@@ -48,6 +48,8 @@ const Invite: React.FC = () => {
     // Criar chave no formato esperado
     const key = `${normalizedFirstName}${normalizedLastName}`;
 
+    console.log(`Chave gerada: ${key}`); // Adicione esta linha para depuração
+
     // Verificar se a chave existe no objeto correctSurnames
     if (correctSurnames[key]) {
       setMessage(correctSurnames[key].message);
