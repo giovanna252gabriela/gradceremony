@@ -1,0 +1,132 @@
+@font-face {
+    font-family: 'Source Code Pro';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Source Code Pro'), local('SourceCodePro-Regular'), url(http://themes.googleusercontent.com/static/fonts/sourcecodepro/v4/mrl8jkM18OlOQN8JLgasDxM0YzuT7MdOe03otPbuUS0.woff) format('woff');
+}
+
+body {
+    font-family: 'Source Code Pro', monospace;
+    background: #000;
+    color: #00FF00;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.matrix {
+    z-index: -1;
+}
+
+.invite-section {
+    position: relative;
+    text-align: center;
+    color: #00FF00;
+    font-family: 'Source Code Pro', monospace;
+    background-color: black;
+    border: 1px solid #00FF00;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 400px; /* Limitar largura para telas grandes */
+    box-sizing: border-box;
+}
+
+.invite-input {
+    background-color: #282828;
+    color: #00FF00;
+    border: 1px solid #00FF00;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.invite-input:focus {
+    outline: none;
+    border: 1px solid #00FF00;
+    background-color: #0a320a;
+    color: #00FF00;
+}
+
+.invite-input::placeholder {
+    color: #00ff00;
+}
+
+.invite-button {
+    background-color: #282828;
+    color: #00FF00;
+    border: 1px solid #00FF00;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.invite-button:hover {
+    background-color: #0a320a;
+}
+
+a {
+    color: #ffcc00;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+#inviteMessage {
+    font-size: 1rem;
+    margin-top: 20px;
+}
+
+/* Responsividade para dispositivos móveis */
+@media screen and (max-width: 600px) {
+    .invite-section {
+        align-self: center;
+        width: 90%;
+        padding: 15px;
+        max-width: none;
+    }
+body{
+    align-items: start;
+}
+.App{
+    margin-top: 100px;
+}
+    .invite-input, .invite-button {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+    h2 {
+        font-size: 1rem;
+    }
+
+    #inviteMessage {
+        font-size: 1rem;
+    }
+}
