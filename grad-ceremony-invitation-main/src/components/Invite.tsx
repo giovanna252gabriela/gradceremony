@@ -45,8 +45,8 @@ const Invite: React.FC = () => {
     const normalizedFirstName = normalizeText(name);
     const normalizedLastName = normalizeText(surname);
 
-    // Criar chave no formato esperado (primeira letra maiúscula no sobrenome)
-    const key = `${normalizedFirstName}${normalizedLastName.charAt(0).toUpperCase()}${normalizedLastName.slice(1)}`;
+    // Criar chave no formato esperado
+    const key = `${normalizedFirstName}${normalizedLastName}`;
 
     // Verificar se a chave existe no objeto correctSurnames
     if (correctSurnames[key]) {
@@ -133,7 +133,7 @@ const Invite: React.FC = () => {
         <h3 style={{ marginTop: '20px', color: '#00FF00' }}>
           Com carinho,
           <br />
-          Giovanna <3
+          Matheus Augusto Moreira
         </h3>
       )}
     </div>
